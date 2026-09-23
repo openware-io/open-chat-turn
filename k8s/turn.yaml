@@ -16,7 +16,7 @@ spec:
       containers:
         - name: turn
           # Replace the registry/repository for your release image.
-          image: registry.example.com/openware/open-chat-turn:1.0.0
+          image: ghcr.io/openware-io/open-chat-turn:1.0.0
           imagePullPolicy: IfNotPresent
           resources:
             # Baseline for one TURN replica; tune from relay-session traffic.
