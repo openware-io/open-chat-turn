@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gv-chat-turn
+  name: open-chat-turn
   namespace: im-business
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gv-chat-turn
+      app: open-chat-turn
   template:
     metadata:
       labels:
-        app: gv-chat-turn
+        app: open-chat-turn
     spec:
       containers:
         - name: turn
           # Replace the registry/repository for your release image.
-          image: crpi-2xbf44rg544imbew.cn-hangzhou.personal.cr.aliyuncs.com/meta-cogni/gv-chat-turn:1.0.0
+          image: registry.example.com/openware/open-chat-turn:1.0.0
           imagePullPolicy: IfNotPresent
           resources:
             # Baseline for one TURN replica; tune from relay-session traffic.
@@ -32,16 +32,16 @@ spec:
               protocol: UDP
           envFrom:
             - configMapRef:
-                name: gv-chat-turn-config
+                name: open-chat-turn-config
             - secretRef:
-                name: gv-chat-turn-credentials
+                name: open-chat-turn-credentials
       imagePullSecrets:
         - name: acr-public-key
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: gv-chat-turn
+  name: open-chat-turn
   namespace: im-business
   annotations:
     service.beta.kubernetes.io/alicloud-loadbalancer-address-type: internet
@@ -49,7 +49,7 @@ spec:
   type: LoadBalancer
   externalTrafficPolicy: Local
   selector:
-    app: gv-chat-turn
+    app: open-chat-turn
   ports:
     - name: turn-udp
       port: 3478
