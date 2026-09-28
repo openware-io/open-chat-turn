@@ -1,4 +1,4 @@
-# gv_chat_turn
+# open-chat-turn
 
 Standalone TURN relay for App WebRTC calls. Signalling, call control, user authentication, and all business integrations remain outside this service.
 
