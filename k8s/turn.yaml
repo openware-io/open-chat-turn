@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: turn
-          # Replace the registry/repository for your release image.
-          image: ghcr.io/openware-io/open-chat-turn:1.0.0
+          # 发布脚本从已校验的 release manifest 注入该镜像；禁止手工更新 tag。
+          image: __APP_IMAGE_OPEN_CHAT_TURN__
           imagePullPolicy: IfNotPresent
           resources:
             # Baseline for one TURN replica; tune from relay-session traffic.
