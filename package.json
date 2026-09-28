@@ -2,7 +2,8 @@
   "name": "open_chat_turn",
   "version": "1.0.0",
   "scripts": {
-    "bundle": "node scripts/build-split.js"
+    "bundle": "node scripts/build-split.js",
+    "check": "npm run bundle && npm audit --omit=dev --audit-level=high"
   },
   "dependencies": {
     "node-turn": "^0.0.6"
