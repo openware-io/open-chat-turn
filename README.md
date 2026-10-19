@@ -1,5 +1,7 @@
 # open-chat-turn
 
+[中文](README.zh.md) | [English](README.md)
+
 Standalone TURN relay for App WebRTC calls. Signalling, call control, user authentication, and all business integrations remain outside this service.
 
 ## Configuration
