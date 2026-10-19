@@ -12,7 +12,7 @@ Standalone TURN relay for App WebRTC calls. Signalling, call control, user authe
 | `TURN_LISTENING_PORT` | `3478` | Optional; valid TCP/UDP port |
 | `TURN_RELAY_MIN_PORT` | `49152` | Optional; lower bound of the UDP relay range |
 | `TURN_RELAY_MAX_PORT` | `65535` | Optional; upper bound of the UDP relay range |
-| `TURN_EXTERNAL_IP` | `192.168.1.39` | Required; public IP advertised to clients |
+| `TURN_EXTERNAL_IP` | `203.0.113.10` | Required; public IP advertised to clients |
 | `TURN_USERNAME` | `turnuser` | Required; inject with a Kubernetes Secret |
 | `TURN_PASSWORD` | `dev-turn-password` | Required; inject with a Kubernetes Secret |
 

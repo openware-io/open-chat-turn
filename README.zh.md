@@ -12,7 +12,7 @@
 | `TURN_LISTENING_PORT` | `3478` | 可选；合法的 TCP/UDP 端口 |
 | `TURN_RELAY_MIN_PORT` | `49152` | 可选；UDP 中继范围下界 |
 | `TURN_RELAY_MAX_PORT` | `65535` | 可选；UDP 中继范围上界 |
-| `TURN_EXTERNAL_IP` | `192.168.1.39` | 必填；向客户端公布的公网 IP |
+| `TURN_EXTERNAL_IP` | `203.0.113.10` | 必填；向客户端公布的公网 IP |
 | `TURN_USERNAME` | `turnuser` | 必填；通过 Kubernetes Secret 注入 |
 | `TURN_PASSWORD` | `dev-turn-password` | 必填；通过 Kubernetes Secret 注入 |
 
